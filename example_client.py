@@ -16,7 +16,6 @@ HOST, PORT = "localhost", 8080
 
 
 SCRIPT_TO_EXECUTE = """
-#!/usr/bin/env python
 # /// script
 # requires-python = ">=3.12"
 # dependencies = [
