@@ -1,0 +1,12 @@
+docker build -t fridge-code-exec-img .
+
+docker run --rm \
+  --name fridge \
+  --memory="512m" \
+  --cpus="0.5" \
+  --pids-limit=100 \
+  --read-only \
+  --tmpfs /tmp:exec,nosuid,nodev \
+  --tmpfs /home/appuser/.cache/uv:exec \
+  -p 8080:8080 \
+  fridge-code-exec-img
